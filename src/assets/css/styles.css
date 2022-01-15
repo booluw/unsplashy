@@ -162,6 +162,67 @@ body {
           margin-inline-start: 2rem;
 }
 
+.modal {
+  margin: 5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: white;
+}
+
+.modal__img {
+  width: 70vw;
+  height: 70vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.modal__body {
+  background-color: white;
+  padding: 2rem 4rem;
+  color: #000025;
+}
+
+.modal__heading {
+  font-family: sans-serif;
+}
+
+.modal__heading--sub {
+  font-weight: normal;
+}
+
+.modal__btn {
+  font-size: 3rem;
+  color: white;
+  font-family: sans-serif;
+  cursor: pointer;
+  position: absolute;
+  right: 15rem;
+  top: 3rem;
+  font-weight: 100;
+}
+
+.modal__btn:hover {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  overflow: auto;
+}
+
 .container {
   display: -ms-grid;
   display: grid;

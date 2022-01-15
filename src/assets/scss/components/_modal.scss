@@ -1,0 +1,52 @@
+.modal {
+  margin: 5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: white;
+
+  &__img {
+    width: 70vw;
+    height: 70vh;
+    object-fit: cover;
+  }
+
+  &__body {
+    background-color: white;
+    padding: 2rem 4rem;
+    color: darken(darkblue, 20);
+  }
+
+  &__heading {
+    font-family: sans-serif;
+
+    &--sub {font-weight: normal;}
+  }
+
+  &__btn {
+    font-size: 3rem;
+    color: white;
+    font-family: sans-serif;
+    cursor: pointer;
+    position: absolute;
+    right: 15rem;
+    top: 3rem;
+    font-weight: 100;
+
+    &:hover {
+      color: rgba(black, .9);
+    }
+  }
+
+  &-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(black, .6);
+    display: flex;
+    justify-content: center;
+    transition: 300ms ease-in-out;
+    overflow: auto;
+  }
+}

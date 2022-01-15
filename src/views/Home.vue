@@ -24,20 +24,25 @@
         </div>
       </div>
     </div>
+    <app-modal v-if="modal" :item="modalItem" @close="modal = !modal" />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-
 import { mapActions } from 'vuex'
+import AppModal from '../components/AppModal.vue'
 
 export default {
   name: 'Home',
+  components: {
+    'app-modal': AppModal
+  },
   data() {
     return {
       search: '',
-      items: []
+      items: [],
+      modal: false,
+      modalItem: {}
     }
   },
   methods: {
@@ -46,7 +51,8 @@ export default {
       console.log('search It')
     },
     openModal(img) {
-      console.log(img)
+      this.modalItem = img
+      this.modal = true
     }
   },
   mounted() {
