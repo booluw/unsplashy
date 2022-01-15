@@ -1,0 +1,29 @@
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 5rem .2rem lighten(black, 90);
+  transition: 300ms ease-in-out;
+
+  &:focus-within {
+    box-shadow: 0 0 5rem .2rem lighten(black, 85);
+  }
+
+  &__icon {
+    width: 2rem;
+    height: auto;
+  }
+
+  &__input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1.6rem;
+    font-weight: 600;
+    flex-basis: 90%;
+    margin-inline-start: 2rem;
+  }
+}

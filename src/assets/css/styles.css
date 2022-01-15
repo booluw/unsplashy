@@ -1,0 +1,205 @@
+@-webkit-keyframes loading {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.card {
+  overflow: hidden;
+  border-radius: 1rem;
+  width: 100%;
+  height: auto;
+  position: relative;
+  color: white;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.card--placeholder {
+  padding: 15rem 2.5rem;
+  background-color: #cdcdcd;
+  cursor: default;
+}
+
+.card--placeholder .card__body div {
+  -webkit-animation-name: loading;
+          animation-name: loading;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+.card--placeholder .card__body {
+  background: transparent;
+}
+
+.card--placeholder .card__body div {
+  padding: 1rem 8rem;
+  background-color: #a6a6a6;
+}
+
+.card--placeholder .card__body div:nth-of-type(2n) {
+  padding: 1rem 5rem;
+  -webkit-margin-before: .6rem;
+          margin-block-start: .6rem;
+}
+
+.card__img {
+  height: auto;
+  width: 100%;
+}
+
+.card__body {
+  position: absolute;
+  top: 40%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 2rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.9)));
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.card__heading {
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+
+.card__heading--sub {
+  font-size: 1.6rem;
+}
+
+.input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  -webkit-box-shadow: 0 0 5rem 0.2rem #e6e6e6;
+          box-shadow: 0 0 5rem 0.2rem #e6e6e6;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.input-group:focus-within {
+  -webkit-box-shadow: 0 0 5rem 0.2rem #d9d9d9;
+          box-shadow: 0 0 5rem 0.2rem #d9d9d9;
+}
+
+.input-group__icon {
+  width: 2rem;
+  height: auto;
+}
+
+.input-group__input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1.6rem;
+  font-weight: 600;
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
+  -webkit-margin-start: 2rem;
+          margin-inline-start: 2rem;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: masonry;
+      grid-template-rows: masonry;
+  grid-gap: 10px;
+  grid-auto-flow: row;
+  padding: 0 3rem;
+  margin: -2.5rem 0 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  align-tracks: end;
+  -ms-flex-line-pack: normal;
+      align-content: normal;
+  masonry-auto-flow: next;
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 0 15rem 5rem;
+    margin: -5rem 0 0;
+  }
+}
+
+.jumbotron {
+  padding: 5rem 2rem;
+  background-color: #DDE2E9;
+}
+
+@media screen and (min-width: 1200px) {
+  .jumbotron {
+    padding: 10rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

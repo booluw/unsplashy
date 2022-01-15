@@ -1,0 +1,22 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: masonry;
+  grid-gap: 10px;
+  grid-auto-flow: row;
+  padding: 0 3rem;
+  margin: -2.5rem 0 0;
+  align-items: flex-start;
+  align-tracks: end;
+  align-content: normal;
+  masonry-auto-flow: next;
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 0 15rem 5rem;
+    margin: -5rem 0 0;
+  }
+}
