@@ -1,6 +1,19 @@
 .jumbotron {
   padding: 5rem 2rem;
   background-color: #DDE2E9;
+
+  &__heading {
+    color: darken(darkblue, 20);
+
+    span {
+      color: darken(#DDE2E9, 30);
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: darken(darkblue, 0);
+  }
 }
 
 @media screen and (min-width: 1200px) {

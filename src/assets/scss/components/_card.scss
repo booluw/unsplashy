@@ -13,6 +13,12 @@
     background-color: lighten(grey, 30);
     cursor: default;
 
+    &:nth-of-type(2n) {
+      //grid-column-end: span 2;
+      grid-row-end: span 2;
+      padding: 30rem 2.5rem;
+    }
+
     & .card__body div {
       animation-name: loading;
       animation-timing-function: ease-in-out;

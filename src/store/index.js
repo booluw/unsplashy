@@ -22,6 +22,16 @@ export default new Vuex.Store({
           console.log(error)
         })
       })
+    },
+    searchIt({ commit }, params) {
+      return new Promise((resolve, reject) => {
+        axios({ url: `search/photos?query=${ params }`,method: 'GET'}).then( response => {
+          commit('SAVE_LATEST', response.data.results)
+          resolve(response.data.results)
+        }).catch( error => {
+          console.log(error)
+        })
+      })
     }
   }
 })

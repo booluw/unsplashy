@@ -11,7 +11,15 @@
       <input type="text" class="input-group__input" placeholder="Search for photo" v-model="search"/>
       </label>
     </form>
-    <div class="container">
+    <div class="container" v-if="items.length == 0">
+      <div class="card card--placeholder" v-for="i in 5" :key="i">
+        <div class="card__body">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <div class="container" v-else>
       <div class="card" v-for="item in items" :key="item.id" @click="openModal(item)">
         <img :src="item.urls.raw" class="card__img" :alt="item.alt_description" />
         <div class="card__body">
@@ -40,25 +48,30 @@ export default {
   data() {
     return {
       search: '',
+      searching: false,
       items: [],
       modal: false,
       modalItem: {}
     }
   },
   methods: {
-    ...mapActions(['appInit']),
+    ...mapActions(['appInit', 'searchIt']),
     sendSearch() {
-      console.log('search It')
+      this.$router.push(`/search/${ this.search }`)
     },
     openModal(img) {
       this.modalItem = img
       this.modal = true
-    }
+    },
   },
   mounted() {
+    let resp = []
     this.appInit().then( response => {
-      this.items = response
+      response.forEach(element => {
+        resp.push(element)
+      });
     })
+    this.items = resp
   }
 }
 </script>
