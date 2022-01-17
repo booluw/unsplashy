@@ -177,8 +177,8 @@ body {
 }
 
 .modal__img {
-  width: 70vw;
-  height: 70vh;
+  width: 50vw;
+  height: 50vh;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -198,13 +198,13 @@ body {
 }
 
 .modal__btn {
-  font-size: 3rem;
+  font-size: 2rem;
   color: white;
   font-family: sans-serif;
   cursor: pointer;
   position: absolute;
-  right: 15rem;
-  top: 3rem;
+  right: 5rem;
+  top: 2rem;
   font-weight: 100;
 }
 
@@ -228,6 +228,18 @@ body {
   -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;
   overflow: auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__img {
+    width: 70vw;
+    height: 70vh;
+  }
+  .modal__btn {
+    font-size: 3rem;
+    right: 15rem;
+    top: 3rem;
+  }
 }
 
 .container {
